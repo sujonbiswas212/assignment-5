@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+
+@layer{
+     body{
+          @apply bg-red1
+     }
+     .span1{
+          @apply text-red1
+     }
+}
+@tailwind utilities;
+
