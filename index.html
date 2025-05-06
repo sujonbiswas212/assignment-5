@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="scroll-smooth">
+<html lang="en" class="scroll-smooth" id="htmlTag">
 
 <head>
   <meta charset="UTF-8">
@@ -9,9 +9,34 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
+<style>
+  :root{
+    --color:#fff;
+    --bg:#000;
+  }
+
+  .dark1{
+    --color:#fff;
+    --bg:#000;
+
+  }
+
+  body{
+    --color:#000;
+    --bg:#fff;
+  }
+
+  .active{
+    background-color: rgb(235, 235, 235);
+  }
+
+
+
+</style>
+
 <body>
   <!-- nav section -->
-  <nav class="flex justify-around bg-white-500 py-3 fixed sticky top-0">
+  <nav class="flex justify-around bg-white-500 py-3 fixed sticky top-0 z-10" id="nav1">
     <div>
       <img src="images/logo.png" alt="">
     </div>
@@ -25,7 +50,7 @@
     </div>
     <div class="flex gap-5 font-bold">
       <button class="bg-red-500 outline-none rounded px-3 text-white">Register Interest</button>
-      <button class="text-4xl"><i class="fa-solid fa-moon"></i></button>
+      <button class="text-4xl" id="swich"><i class="fa-solid fa-moon"></i></button>
 
     </div>
 
@@ -1295,6 +1320,32 @@
   <hr class="w-full mt-10"> 
   <p class="text-center mt-3">Copyright 2022 Creatives For You LTD</p>
 </footer>
+
+<!-- script -->
+
+<script>
+  const htmlTag = document.getElementById('htmlTag');
+  const swich = document.getElementById('swich');
+  const body1 = document.querySelectorAll('body');
+  const nav1 = document.querySelector('#nav1')
+  swich.addEventListener('click',()=>{
+    body1.classList.toggle('dark1');
+
+    
+
+  }) 
+
+window.onscroll = function(){
+  var scroll1  = window.scrollY;
+  if(scroll1>=200){
+    nav1.classList.add('active')
+  }
+  else{
+    nav1.classList.remove('active')
+
+  }
+}
+</script>
 
 </body>
 
