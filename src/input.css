@@ -1,12 +1,13 @@
+
 @tailwind base;
 @tailwind components;
 
 @layer{
      body{
-          @apply bg-red1
+          @apply 
      }
      .span1{
-          @apply text-red1
+          @apply 
      }
 }
 @tailwind utilities;

@@ -1,6 +1,6 @@
  /** @type {import('tailwindcss').Config} */
  export default {
-  content: ["*"],
+  content: ['*'],
   theme: {
     colors:{
       gray1:'#f4f4f5',
